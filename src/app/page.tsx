@@ -8,7 +8,7 @@ const page = async () => {
   //   `${process.env.NEXT_PUBLIC_JIKAN_BASE_API_URL}top/anime?limit=10?sfw=true`
   // );
   const topAnime = await api("top/anime?limit=10");
-  console.log(topAnime);
+  // console.log(topAnime);
   const newAnime = await api("seasons/now");
   // console.log(anime);
 

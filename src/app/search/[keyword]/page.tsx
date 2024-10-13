@@ -5,14 +5,16 @@ import api from "@/api/api";
 
 const page = async ({ params }: { params: { keyword: string } }) => {
   const { keyword } = params;
-  const searchAnime = await api(`anime?q=${keyword}`);
+  const decodedKeyword = decodeURI(keyword)
+  console.log(decodedKeyword)
+  const searchAnime = await api(`anime?q=${decodedKeyword}`);
   // console.log(anime);
 
   return (
     <>
       <section>
         <Header
-          title={`pencarian untuk ${keyword}....`}
+          title={`pencarian untuk "${decodedKeyword}...."`}
           // linkHref="/popular"
           // linkTitle="Lihat Semua"
         />

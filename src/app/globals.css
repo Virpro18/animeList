@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -18,4 +20,47 @@ img {
 
 img:hover {
   scale: 102%;
+}
+
+/* Styling keseluruhan scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Lebar scrollbar (untuk vertical) */
+  height: 5px;
+  /* Tinggi scrollbar (untuk horizontal) */
+}
+
+/* Styling bagian scroll thumb */
+::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 10px;
+}
+
+/* Styling bagian jalur scrollbar */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Warna track */
+  /* border-radius: 10px;       Bentuk track */
+}
+
+/* Styling sudut scrollbar (untuk overflow-x dan overflow-y) */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #ffc639 95%, #0000) 50% 1px/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 14px), #E4E4ED 0);
+  animation: s9 2s infinite linear;
+}
+
+@keyframes s9 {
+  to {
+    transform: rotate(1turn)
+  }
 }
