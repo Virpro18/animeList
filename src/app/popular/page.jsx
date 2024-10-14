@@ -5,8 +5,8 @@ import Pagination from "@/components/utilities/Pagination";
 import {api} from "@/libs/api";
 import { useEffect, useState } from "react";
 import AnimeCard from "@/components/animeCard";
-try{
 const popular = () => {
+  try{
   const [page, setpage] = useState(1);
   const [topAnime, setTopAnime] = useState([]);
   const fetchData = async () => {
@@ -43,9 +43,9 @@ const popular = () => {
       />
     </>
   );
-};
 } catch (error) {
   alert(error);
 }
+};
 
 export default popular;
