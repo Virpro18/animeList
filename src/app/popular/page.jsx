@@ -30,8 +30,10 @@ const popular = () => {
   useEffect(() => {
     fetchData();
   }, [page]);
-  return (
-    <>
+  try {
+
+    return (
+      <>
       <HeaderMenu title={`ANIME TERPOPULER #${page}`} />
       <section>
       <AnimeCard animeData={topAnime} />
@@ -40,8 +42,16 @@ const popular = () => {
         pagging={handlePageChange}
         pageNumber={page}
         lastPage={topAnime.pagination?.last_visible_page}
-      />
+        />
     </>
+  );
+} catch (error) {
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <h1 className="text-3xl font-bold text-red-500">
+        {error.message}
+      </h1>
+    </div>
   );
 };
 
