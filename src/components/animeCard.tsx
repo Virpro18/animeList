@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { ApiType } from "@/api/apiType";
+import type { ApiType } from "@/libs/apiType";
 import NoAnime from "./utilities/NoAnime";
 import { memo } from "react";
 import Loading from "@/app/loading";
@@ -31,7 +31,7 @@ const AnimeCard: React.FC<props> = ({ animeData }) => {
           identity = data.mal_id;
           return (
             <Link
-              href={`/${data.mal_id}`}
+              href={`/anime/${data.mal_id}`}
               className="cursor-pointer text-color-primary hover:text-color-accent transition-all"
               key={data.mal_id}
             >

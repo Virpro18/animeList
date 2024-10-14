@@ -8,7 +8,7 @@ interface headerProps {
 
 const Header: React.FC<headerProps> = ({ title, linkHref, linkTitle }) => {
   return (
-    <div className="p-4 flex items-center justify-between text-color-primary">
+    <div className="p-4 pt-6 flex items-center justify-between text-color-primary">
       <h1 className="text-2xl font-bold">{title}</h1>
       {linkTitle && linkHref ? (
         <Link

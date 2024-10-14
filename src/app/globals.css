@@ -24,9 +24,9 @@ img:hover {
 
 /* Styling keseluruhan scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
   /* Lebar scrollbar (untuk vertical) */
-  height: 5px;
+  height: 10px;
   /* Tinggi scrollbar (untuk horizontal) */
 }
 
@@ -57,6 +57,13 @@ img:hover {
     radial-gradient(farthest-side, #ffc639 95%, #0000) 50% 1px/12px 12px no-repeat,
     radial-gradient(farthest-side, #0000 calc(100% - 14px), #E4E4ED 0);
   animation: s9 2s infinite linear;
+}
+
+section {
+  background-image: url("https://pbs.twimg.com/media/GYaW7b-a4AA-D6a?format=png&name=small");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
 }
 
 @keyframes s9 {

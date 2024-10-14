@@ -15,7 +15,7 @@ import Navbar from "@/components/utilities/Navbar";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "500" });
 export const metadata = {
-  title: "Cuyanimelist",
+  title: "NaNanime",
   description: "Anime list project by NaN",
   authors: [{ name: "NaN", url: "URL_ADDRESS" }],
   icons: {

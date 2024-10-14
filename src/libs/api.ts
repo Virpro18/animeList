@@ -1,4 +1,4 @@
-const api = async (url: string) => {
+export const api = async (url: string) => {
   let op = "?";
   if (url.includes("?")) {
     op = "&";
@@ -14,5 +14,3 @@ const api = async (url: string) => {
     console.log(error);
   }
 };
-
-export default api;
