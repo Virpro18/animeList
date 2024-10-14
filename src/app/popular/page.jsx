@@ -2,7 +2,7 @@
 
 import HeaderMenu from "@/components/utilities/HeaderMenu";
 import Pagination from "@/components/utilities/Pagination";
-import { api } from "@/libs/api";
+import {api} from "@/libs/api";
 import { useEffect, useState } from "react";
 import AnimeCard from "@/components/animeCard";
 
@@ -30,26 +30,19 @@ const popular = () => {
   useEffect(() => {
     fetchData();
   }, [page]);
-  try {
-    return (
-      <>
-        <HeaderMenu title={`ANIME TERPOPULER #${page}`} />
-        <section>
-          <AnimeCard animeData={topAnime} />
-        </section>
-        <Pagination
-          pagging={handlePageChange}
-          pageNumber={page}
-          lastPage={topAnime.pagination?.last_visible_page}
-        />
-      </>
-    );
-  } catch (error) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-3xl font-bold text-red-500">{error.message}</h1>
-      </div>
-    );
-  }
+  return (
+    <>
+      <HeaderMenu title={`ANIME TERPOPULER #${page}`} />
+      <section>
+      <AnimeCard animeData={topAnime} />
+      </section>
+      <Pagination
+        pagging={handlePageChange}
+        pageNumber={page}
+        lastPage={topAnime.pagination?.last_visible_page}
+      />
+    </>
+  );
 };
+
 export default popular;
