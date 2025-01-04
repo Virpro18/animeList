@@ -9,7 +9,7 @@ interface response {
 
 const anime = async ({ params }: {
     params: {
-        id: string
+        id: Promise<string>
     }
 }) => {
     const { id } = await params
@@ -48,7 +48,7 @@ const anime = async ({ params }: {
                 <p className="text-justify sm:text-lg">{anime.data.synopsis}</p>
             </div>
             <div>
-                <VideoPlayer YoutubeId={anime.data.trailer.youtube_id}/>
+                <VideoPlayer YoutubeId={anime.data.trailer.youtube_id} />
             </div>
         </>
     )
