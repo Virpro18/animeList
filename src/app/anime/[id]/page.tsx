@@ -7,7 +7,7 @@ interface response {
     data: JikanData
 }
 
-const anime = async ({ params }: { params: { id: string } }
+const anime = async ({ params }: { params: Promise<{ id: string }>  }
 ) => {
     const { id } = await params
     const anime: response = await fetchs(`https://api.jikan.moe/v4/anime/${id}`)
