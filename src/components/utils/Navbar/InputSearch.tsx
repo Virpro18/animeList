@@ -8,8 +8,9 @@ import { useRef } from "react";
 const InputSearch = () => {
     const searchRef = useRef<HTMLInputElement>(null);
     const router = useRouter();
-
+    /* eslint-enable @typescript-eslint/no-empty-object-type */
     interface HandleSearchEvent extends React.MouseEvent<HTMLButtonElement> { }
+    /* eslint-enable @typescript-eslint/no-empty-object-type */
 
     const handleSearch = (e: HandleSearchEvent) => {
         e.preventDefault();

@@ -123,7 +123,7 @@ interface RecomendedData {
   entry: Entry[];
   content: string;
   user: User;
-  [key: string]: any
+  [key: string]: string | Entry[] | User;
 }
 
 interface User {

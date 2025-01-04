@@ -1,8 +1,8 @@
 "use server";
 
-import JikanResponse, { Entry, JikanRecomendedAnime } from "@/types/jikan";
+import { Entry, JikanRecomendedAnime } from "@/types/jikan";
 
-export const fetchs = async (url: string): Promise<any> => {
+export const fetchs = async (url: string) => {
   const maxRetries = 3;
   let attempts = 0;
 
@@ -32,7 +32,13 @@ export const getNestedAnimes = async (
   objectProperty: string
 ) => {
   const response: JikanRecomendedAnime = await fetchs(resource);
-  return response.data.flatMap((item) => item[objectProperty]);
+  return response.data.flatMap((item) => {
+    const value = item[objectProperty];
+    if (Array.isArray(value)) {
+      return value;
+    }
+    return [];
+  });
 };
 
 export const reproduce = async (data: Entry[], gap: number = 5) => {

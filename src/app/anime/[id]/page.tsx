@@ -1,6 +1,6 @@
 import VideoPlayer from "@/components/utils/VideoPlayer"
 import { fetchs } from "@/libs/fetch"
-import JikanResponse, { JikanData } from "@/types/jikan"
+import { JikanData } from "@/types/jikan"
 import Image from "next/image"
 
 interface response {
