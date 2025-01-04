@@ -27,7 +27,7 @@ const InputSearch = () => {
 
     return (
         <div className="relative text-black">
-            <input type="text" placeholder="search your anime...." className="p-2 rounded w-full" ref={searchRef} onKeyDown={(e) => { if (e.key === 'Enter') handleSearch(e as any); }} />
+            <input type="text" placeholder="search your anime...." className="p-2 rounded w-full" ref={searchRef} onKeyDown={(e) => { if (e.key === 'Enter') handleSearch(e); }} />
             <button className="absolute top-2 end-2" onClick={handleSearch}>
                 <MagnifyingGlass size={24} />
             </button>
