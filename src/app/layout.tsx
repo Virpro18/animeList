@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono,Poppins } from "next/font/google";
 import "./globals.css";
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from "@/components/utils/Navbar";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
