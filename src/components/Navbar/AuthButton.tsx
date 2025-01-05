@@ -7,8 +7,9 @@ const AuthButton = async () => {
     const actionLabel = user ? "Sign Out" : "Sign In"
     const actionURL = user ? "signout" : "signin"
     return (
-        <div>
-            <Link href={`/api/auth/${actionURL}`}>{actionLabel}</Link>
+        <div className="flex justify-between gap-3 ">
+            {user && <Link href={`/users/dashboard`} className="py-1">Dashboard</Link>}
+            <Link href={`/api/auth/${actionURL}`} className="bg-color-dark text-color-accent py-1 px-12 inline-block">{actionLabel}</Link>
         </div>
     )
 }

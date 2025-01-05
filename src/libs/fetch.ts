@@ -32,7 +32,7 @@ export const getNestedAnimes = async (
   objectProperty: string
 ) => {
   const response: JikanRecomendedAnime = await fetchs(resource);
-  return response.data.flatMap((item) => {
+  return response.data?.flatMap((item) => {
     const value = item[objectProperty];
     if (Array.isArray(value)) {
       return value;
@@ -42,7 +42,7 @@ export const getNestedAnimes = async (
 };
 
 export const reproduce = async (data: Entry[], gap: number = 5) => {
-  const first = Math.floor(Math.random() * (data.length - gap) + 1);
+  const first = Math.floor(Math.random() * (data?.length - gap) + 1);
   const last = first + gap;
   console.log({ first, last });
 
