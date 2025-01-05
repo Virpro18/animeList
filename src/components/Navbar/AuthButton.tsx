@@ -4,6 +4,7 @@ import Link from "next/link"
 
 const AuthButton = async () => {
     const user = await authUserSession()
+    console.log(user)
     const actionLabel = user ? "Sign Out" : "Sign In"
     const actionURL = user ? "signout" : "signin"
     return (
