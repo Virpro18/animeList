@@ -18,10 +18,8 @@ export const authOption = {
   callbacks: {
     async session({ 
       session, 
-      token 
     }: { 
       session: CustomSession; 
-      token: JWT;
     }): Promise<CustomSession> {
       if (session.user?.image) {
         session.user.image = `${session.user.image}?t=${Date.now()}`;
