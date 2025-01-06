@@ -1,10 +1,11 @@
 import { authUserSession } from "@/libs/auth-libs"
 import Image from 'next/image'
+import { redirect } from "next/navigation"
 
 const dashboard = async () => {
     const user = await authUserSession()
     if (!user) {
-        return <div className="text-color-primary">Loading...</div>
+        return redirect("/api/auth/signin")
     }
 
     return (
